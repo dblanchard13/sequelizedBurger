@@ -1,8 +1,9 @@
 var express = require("express");
-var Burger = require("../models/burger.js");
+var db = require("../models");
 var router = express.Router();
 router.get("/", function (req, res) {
-    Burger.selectAll("burgers", function (err, response) {
+    console.log(db.seqBurger);
+    db.seqBurger.findAll().then(function (err, response) {
         if (err) throw err;
         else {
             var data = {
@@ -14,19 +15,30 @@ router.get("/", function (req, res) {
 });
 
 router.post("/", function (req, res) {
-    Burger.insertOne("burgers", req.body.name, function (err, response) {
+    db.Burger.create({
+        burger_name: req.body.name
+    }).then(function (err, response) {
         console.log(response);
         res.redirect("/");
     });
 });
 
 router.put("/update/:id", function (req, res) {
-    Burger.updateOne("burgers", true, parseInt(req.params.id));
+    db.Burger.update({
+        devoured: true,
+        where: {
+            id: req.params.id
+        }
+    });
     res.redirect("/");
 });
 
 router.delete("/delete/:id", function (req, res) {
-    Burger.deleteOne("burgers", parseInt(req.params.id));
+    db.Burger.destroy({
+        where: {
+            id: req.params.id
+        }
+    });
     res.redirect("/");
 });
 module.exports = router;
