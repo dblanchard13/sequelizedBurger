@@ -1,2 +1,2 @@
-# sequelizedBurger
-HW 15
+# burger
+Week 14 Assignment

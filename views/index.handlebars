@@ -1,0 +1,35 @@
+{{#each allBurgers}}
+   {{#unless devoured}}
+    <div class="row">
+        <div class="col-md-4">
+            <ul class="list-group not-eaten">
+                <li class="list-group-item">{{burger_name}}</li>
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <form method="POST" action="/update/{{id}}?_method=PUT">
+                <span class="input-group-btn">
+                    <button class="btn btn-default devour-btn" type="submit">Devour It!</button>
+                </span>
+            </form>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+    {{else}}
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <form method="POST" action="/delete/{{id}}?_method=DELETE">
+                <span class="input-group-btn">
+                    <button class="btn btn-default devour-btn" type="submit">Delete It!</button>
+                </span>
+            </form>
+        </div>
+        <div class="col-md-4">
+            <ul class="list-group eaten">
+                <li class="list-group-item" id="burger-{{id}}">{{burger_name}}</li>
+            </ul>
+        </div>
+    </div>
+    {{/unless}}
+{{/each}}

@@ -1,0 +1,26 @@
+body{
+    background-color: orange;
+    text-align: center;
+}
+
+#burger-img{
+    height: 20%;
+    width: 20%;
+}
+
+.devour-btn{
+    text-align: center;
+}
+
+.not-eaten {
+    text-align: center;
+    width: 50%;
+    float: left;
+}
+
+.eaten{
+    float: right;
+    opacity: 0.8;
+    text-align: center;
+    width: 50%;
+}
