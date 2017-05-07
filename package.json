@@ -1,21 +1,21 @@
 {
   "name": "burger",
-  "version": "1.0.0",
-  "description": "Week 14 Assignment",
+  "version": "2.0.0",
+  "description": "Week 15 Assignment",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sfrunner/burger.git"
+    "url": "git+https://github.com/sfrunner/sequelizedburger.git"
   },
   "author": "Steven Fox",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/sfrunner/burger/issues"
+    "url": "https://github.com/sfrunner/sequelizedburger/issues"
   },
-  "homepage": "https://github.com/sfrunner/burger#readme",
+  "homepage": "https://github.com/sfrunner/sequelizedburger#readme",
   "dependencies": {
     "body-parser": "^1.17.1",
     "express": "^4.15.2",
