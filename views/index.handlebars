@@ -7,9 +7,10 @@
             </ul>
         </div>
         <div class="col-md-4">
+            <input type="text" id="text-{{id}}"/>
             <form method="POST" action="/update/{{id}}?_method=PUT">
                 <span class="input-group-btn">
-                    <button class="btn btn-default devour-btn" type="submit">Devour It!</button>
+                    <button class="btn btn-default devour-btn" id="{{id}}" type="submit">Devour It!</button>
                 </span>
             </form>
         </div>
